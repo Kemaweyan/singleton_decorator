@@ -33,16 +33,16 @@ a class name in unit tests:
             ...
     YourClass.method(...)
 
-this code would not wokr because YouClass actually contains a wrapper function
+this code would not work because ``YouClass`` actually contains a wrapper function
 but not your class object. Also this approach causes another problem if your
-tests require separate instances of the objects since a singleton pattern could
+tests require separate instances of the objects, so a singleton pattern could
 break an isolation of different tests.
 
 Solution
 ========
 
 The **singleton-decorator** offers a simple solution to avoid both of these
-problems. It uses separate wrapper object for each decorated class and holds
+problems. It uses a separate wrapper object for each decorated class and holds
 a class within ``__wrapped__`` attribute so you can access the decorated class
 directly in your unit tests.
 
@@ -77,7 +77,7 @@ calling it as a simple class object:
 
 .. code-block::
 
-    obj = YourClass()  # create a new instance
+    obj = YourClass()  # creates a new instance
     obj2 = YourClass()  # returns the same instance
     obj3 = YourClass()  # returns the same instance
     ...
@@ -91,9 +91,9 @@ You also could pass args and kwargs into constructor of your class:
 .. NOTE::
 
     Since the singleton pattern allows to create only one instance from
-    the class, an __init__ method would be called once with args and kwargs
-    passed at the first call. Arguments of all future calls would be
-    completely ignored and would not impact the existing instance at all.
+    the class, an ``__init__`` method would be called once with args and
+    kwargs passed at the first call. Arguments of all future calls would
+    be completely ignored and would not impact the existing instance at all.
 
 Unit testing
 ============
@@ -115,10 +115,11 @@ use the ``__wrapped__`` attribute of the wrapper object:
     # tests.py
     class TestYourClass(TestCase):
         def test_your_method(self):
-            obj = mock.MagickMock()
+            obj = mock.MagicMock()
             YourClass.__wrapped__.your_method(obj)
             ...
 
 This test runs a code of the ``your_method`` only using a mock object
 as the ``self`` argument, so the test would be run in complete isolation
-and would not depend on another pieces of your code.
+and would not depend on another pieces of your code including a constructor
+method.
