@@ -1,4 +1,7 @@
 *.pyc
+htmlcov/
+.coverage
+*egg-info/
 build/
 dist/
-singleton_decorator.egg-info/
+.eggs/
