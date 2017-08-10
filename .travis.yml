@@ -5,7 +5,7 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
-script: coverage run --source=singleton_decorator ./setup.py test
+script: coverage run --source=singleton_decorator setup.py test
 after_success:
   - pip install coveralls
   - coveralls
