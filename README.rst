@@ -1,6 +1,13 @@
 singleton-decorator
 ===================
 
+.. image:: https://travis-ci.org/Kemaweyan/singleton-decorator.svg?branch=master
+    :target: https://travis-ci.org/Kemaweyan/singleton-decorator
+
+.. image:: https://coveralls.io/repos/github/Kemaweyan/singleton-decorator/badge.svg?branch=master
+    :target: https://coveralls.io/github/Kemaweyan/singleton-decorator?branch=master
+
+
 A testable singleton decorator allows easily create a singleton objects
 just adding a decorator to class definition but also allows easily write
 unit tests for those classes.
