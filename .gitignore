@@ -1,1 +1,4 @@
 *.pyc
+build/
+dist/
+singleton_decorator.egg-info/
