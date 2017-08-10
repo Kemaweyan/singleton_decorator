@@ -1,6 +1,6 @@
 from unittest import TestCase, mock
 
-from . import decorator
+from .. import decorator
 
 class TestSingletonWrapper(TestCase):
     """Tests for the _SingletonWrapper class"""
