@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 import singleton_decorator
 
 setup(
-    name = "singleton_decorator",
+    name = "singleton-decorator",
     version = singleton_decorator.__version__,
     fullname = "Singleton Decorator",
     description = "A testable singleton decorator",
