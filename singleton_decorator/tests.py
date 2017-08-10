@@ -2,7 +2,7 @@ from unittest import TestCase, mock
 
 from . import decorator
 
-class TestSingletonWrapper(testCase):
+class TestSingletonWrapper(TestCase):
     """Tests for the _SingletonWrapper class"""
 
     def setUp(self):
