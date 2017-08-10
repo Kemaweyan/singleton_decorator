@@ -29,7 +29,7 @@ wraps a class with inner wrapper function like this:
         return wrapper
 
 it works fine with your classes, but it makes impossible a direct access
-to the class object within the wrapper function. So you cannot call methods
+to the class object wrapped with the decorator. So you cannot call methods
 using a class name in unit tests:
 
 .. code-block::
