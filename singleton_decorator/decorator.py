@@ -5,6 +5,7 @@ class _SingletonWrapper:
     """
 
     def __init__(self, cls):
+        self.__doc__ = getattr(cls, '__doc__', None)
         self.__wrapped__ = cls
         self._instance = None
 
