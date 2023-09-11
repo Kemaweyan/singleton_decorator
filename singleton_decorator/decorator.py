@@ -14,6 +14,7 @@ class _SingletonWrapper:
             self._instance = self.__wrapped__(*args, **kwargs)
         return self._instance
 
+
 def singleton(cls):
     """
     A singleton decorator. Returns a wrapper objects. A call on that object
